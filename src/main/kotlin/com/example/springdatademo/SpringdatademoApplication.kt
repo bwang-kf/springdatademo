@@ -1,6 +1,5 @@
 package com.example.springdatademo
 
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.jdbc.DataSourceBuilder
@@ -12,7 +11,6 @@ import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
 import org.springframework.jdbc.datasource.DataSourceTransactionManager
-import org.springframework.jdbc.datasource.SimpleDriverDataSource
 import org.springframework.transaction.PlatformTransactionManager
 import javax.sql.DataSource
 
