@@ -6,5 +6,4 @@ data class Appuser(@Id
            var id: Long? = null,
                    var email: String,
                    var username: String,
-                   var password: String) {
-}
+                   var password: String)
