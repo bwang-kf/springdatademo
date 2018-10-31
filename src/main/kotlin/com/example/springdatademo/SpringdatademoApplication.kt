@@ -21,22 +21,15 @@ import javax.sql.DataSource
 @Configuration
 class SpringdatademoApplication {
     @Bean
-    fun operations(): NamedParameterJdbcOperations {
-        return NamedParameterJdbcTemplate(dataSource())
-    }
+    fun operations(): NamedParameterJdbcOperations = NamedParameterJdbcTemplate(dataSource())
 
-    // @Bean(name=["transactionManager"])
     @Bean
-    fun transactionManager(): PlatformTransactionManager {
-        return DataSourceTransactionManager(dataSource())
-    }
+    fun transactionManager(): PlatformTransactionManager = DataSourceTransactionManager(dataSource())
 
     @Bean
     @Primary
     @ConfigurationProperties(prefix = "app.datasource")
-    fun dataSource(): DataSource {
-        return DataSourceBuilder.create().build()
-    }
+    fun dataSource(): DataSource = DataSourceBuilder.create().build()
 }
 
 fun main(args: Array<String>) {
